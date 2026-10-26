@@ -1,0 +1,9 @@
+project: savantenvs/direwolf
+target: fuzz_aprs
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_aprs/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_aprs
+    libfuzzer: true
+    timeout: 10

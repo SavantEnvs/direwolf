@@ -1,0 +1,8 @@
+project: savantenvs/direwolf
+target: atest_4800
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/atest_4800/testsuite
+cmds:
+  - cmd: /mayhem/atest -B4800 -F1 @@
+    timeout: 60

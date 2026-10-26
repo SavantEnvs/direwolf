@@ -1,0 +1,8 @@
+project: savantenvs/direwolf
+target: atest_2400
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/atest_2400/testsuite
+cmds:
+  - cmd: /mayhem/atest -B2400 -j -F1 @@
+    timeout: 60
